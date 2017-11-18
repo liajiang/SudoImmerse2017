@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class CarDriver : MonoBehaviour {
     public event EventHandler<DirectionChangedEventArgs> DirectionChanged;
-
+    public event EventHandler<GearChangedEventArgs> GearChanged;
+    
+    public bool IsReverse { get { return _isReverse; } }
     public float WheelDirection { get { return _wheelDirection; } }
 
     private float _wheelDirection;
+    private bool _isReverse;
 
     private void Awake()
     {
@@ -23,7 +26,20 @@ public class CarDriver : MonoBehaviour {
         EventHandler<DirectionChangedEventArgs> handler = DirectionChanged;
         if (handler != null)
         {
-            handler(this, args);
+            handler(sender, args);
         }
     }
+
+    public void OnGearChanged(object sender, GearChangedEventArgs args)
+    {
+        _isReverse = args.IsReverse;
+        var handler = GearChanged;
+        if (handler != null)
+        {
+            handler(sender, args);
+        }
+        Debug.Log(_isReverse);
+    }
+
+
 }
