@@ -5,7 +5,7 @@ using System;
 
 public class DirectionChangedEventArgs : EventArgs {
     public float Direction { get; set; }
-    public DirectionChangedEventArgs(int direction)
+    public DirectionChangedEventArgs(float direction)
     {
         Direction = direction;
     }

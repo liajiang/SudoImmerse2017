@@ -23,6 +23,8 @@ namespace VRTK.GrabAttachMechanics
         {
             isReleasable = false;
             base.StopGrab(applyGrabbingObjectVelocity);
+            grabbedObjectRigidBody.angularVelocity = Vector3.zero;
+            grabbedObjectRigidBody.velocity = Vector3.zero;
         }
 
         /// <summary>
