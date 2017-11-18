@@ -9,9 +9,11 @@ public class CarDriver : MonoBehaviour {
     
     public bool IsReverse { get { return _isReverse; } }
     public float WheelDirection { get { return _wheelDirection; } }
+    public float Acceleration { get { return _acceleration; } }
 
     private float _wheelDirection;
     private bool _isReverse;
+    private float _acceleration;
 
     private void Awake()
     {
@@ -38,8 +40,6 @@ public class CarDriver : MonoBehaviour {
         {
             handler(sender, args);
         }
-        Debug.Log(_isReverse);
     }
-
 
 }
