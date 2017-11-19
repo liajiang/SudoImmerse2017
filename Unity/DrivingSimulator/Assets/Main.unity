@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 22632657}
   - component: {fileID: 22632656}
   - component: {fileID: 22632658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Simulator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 56980715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CarBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,17 +222,31 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1543037077}
-  - {fileID: 426919580}
-  - {fileID: 263378284}
   - {fileID: 578618557}
   - {fileID: 1079182044}
   - {fileID: 764359204}
   - {fileID: 2006671168}
-  - {fileID: 790215344}
-  - {fileID: 1779598913}
   m_Father: {fileID: 264697730}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &58019595 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 685d0be1dcffc0e4181e14bcab8f64fd, type: 3}
+  m_PrefabInternal: {fileID: 1663409098}
+--- !u!64 &58019600
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58019595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 685d0be1dcffc0e4181e14bcab8f64fd, type: 3}
 --- !u!1 &110530939
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +256,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 110530940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +360,7 @@ Transform:
   m_LocalScale: {x: 0.086874396, y: -0.053038746, z: 6.5616503}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154437410
 GameObject:
@@ -359,7 +373,7 @@ GameObject:
   - component: {fileID: 154437411}
   - component: {fileID: 154437413}
   - component: {fileID: 154437412}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +445,7 @@ GameObject:
   - component: {fileID: 184309196}
   - component: {fileID: 184309198}
   - component: {fileID: 184309197}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Control Hints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +513,7 @@ GameObject:
   - component: {fileID: 226708474}
   - component: {fileID: 226708476}
   - component: {fileID: 226708475}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +579,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 245310897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SliderOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +617,7 @@ GameObject:
   - component: {fileID: 263378289}
   - component: {fileID: 263378288}
   - component: {fileID: 263378287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Steering Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,11 +632,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 263378283}
   m_LocalRotation: {x: -0.5372996, y: -0, z: -0, w: 0.8433915}
-  m_LocalPosition: {x: -0.37265417, y: 0.20066357, z: 0.5110519}
+  m_LocalPosition: {x: -0.37265417, y: 0.2006635, z: 0.5110519}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 56980715}
-  m_RootOrder: 2
+  m_Father: {fileID: 1173212299}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &263378285
 MeshRenderer:
@@ -678,7 +692,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.014883013, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.014883041, z: 0.000000058673322}
+  m_ConnectedAnchor: {x: 0, y: 0.014883016, z: 0.000000004656613}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -824,7 +838,7 @@ Transform:
   - {fileID: 971339428}
   - {fileID: 787022164}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &302809915
 GameObject:
@@ -837,7 +851,7 @@ GameObject:
   - component: {fileID: 302809916}
   - component: {fileID: 302809918}
   - component: {fileID: 302809917}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Hints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -978,7 +992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426919580}
   - component: {fileID: 426919579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WheelCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,11 +1021,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 426919578}
   m_LocalRotation: {x: -0.5372996, y: -0, z: -0, w: 0.8433915}
-  m_LocalPosition: {x: -0.37265417, y: 0.20066357, z: 0.5110519}
+  m_LocalPosition: {x: -0.37265417, y: 0.2006635, z: 0.5110519}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 56980715}
-  m_RootOrder: 1
+  m_Father: {fileID: 1173212299}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &452399514
 GameObject:
@@ -1309,7 +1323,7 @@ GameObject:
   - component: {fileID: 539219276}
   - component: {fileID: 539219275}
   - component: {fileID: 539219274}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1403,7 +1417,7 @@ GameObject:
   - component: {fileID: 578618558}
   - component: {fileID: 578618560}
   - component: {fileID: 578618561}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OPL_CAR_RED_Wheel_BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1422,7 +1436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 56980715}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &578618558
 MeshRenderer:
@@ -1537,7 +1551,7 @@ GameObject:
   - component: {fileID: 613581358}
   - component: {fileID: 613581357}
   - component: {fileID: 613581356}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1611,7 +1625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674405147}
   - component: {fileID: 674405148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MaxPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1708,7 +1722,7 @@ GameObject:
   - component: {fileID: 764359205}
   - component: {fileID: 764359207}
   - component: {fileID: 764359208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OPL_CAR_RED_Wheel_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,7 +1741,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 56980715}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &764359205
 MeshRenderer:
@@ -1807,7 +1821,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 787022164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightMirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1837,7 +1851,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 790215344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GearStickSliderGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1851,7 +1865,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 790215343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.1332, z: 0.4421}
+  m_LocalPosition: {x: 0, y: -0.13319999, z: 0.4421}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1389882574}
@@ -1860,8 +1874,8 @@ Transform:
   - {fileID: 1064560978}
   - {fileID: 985723317}
   - {fileID: 245310897}
-  m_Father: {fileID: 56980715}
-  m_RootOrder: 7
+  m_Father: {fileID: 1173212299}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854503420
 GameObject:
@@ -1980,7 +1994,10 @@ GameObject:
   - component: {fileID: 264697730}
   - component: {fileID: 923354952}
   - component: {fileID: 923354953}
-  m_Layer: 0
+  - component: {fileID: 923354954}
+  - component: {fileID: 923354955}
+  - component: {fileID: 923354956}
+  m_Layer: 9
   m_Name: Red Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2016,6 +2033,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b286ef216e25aa4b9e5c6583e000a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &923354954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923354951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37256bdd9dbfc4776bd07525ebe4017c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CarDriver: {fileID: 923354953}
+  dragMultiplier: {x: 200, y: 500, z: 100}
+  numberOfGears: 2
+  topSpeed: 2000
+  maximumTurn: 15
+  minimumTurn: 0
+  throttle: 0
+  steer: 0
+--- !u!54 &923354955
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923354951}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &923354956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923354951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9400492, y: 1.4124999, z: 5.1307926}
+  m_Center: {x: -0.32731962, y: -0.20624995, z: 0.020332813}
 --- !u!1 &942311455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,7 +2161,7 @@ Transform:
   m_LocalScale: {x: 0.086874396, y: -0.053038746, z: 6.5616503}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &965206005
 GameObject:
@@ -2110,7 +2173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965206006}
   - component: {fileID: 965206007}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: CrosshairPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2154,7 +2217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966098459}
   - component: {fileID: 966098460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2196,7 +2259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 971339428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftMirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2226,7 +2289,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 985723317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2259,7 +2322,7 @@ GameObject:
   - component: {fileID: 997377360}
   - component: {fileID: 997377359}
   - component: {fileID: 997377358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2350,7 +2413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029250032}
   - component: {fileID: 1029250033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2423,7 +2486,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1064560978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Backward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2454,9 +2517,7 @@ GameObject:
   - component: {fileID: 1079182044}
   - component: {fileID: 1079182046}
   - component: {fileID: 1079182045}
-  - component: {fileID: 1079182047}
-  - component: {fileID: 1079182048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OPL_CAR_RED_Wheel_BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2475,7 +2536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 56980715}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1079182045
 MeshRenderer:
@@ -2520,32 +2581,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1079182043}
   m_Mesh: {fileID: 4300004, guid: 0ff1d82f0e4400d4991dc77808dadf52, type: 3}
---- !u!54 &1079182047
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079182043}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1079182048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1079182043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e5ffebcee704d07b81de5a7bab28fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1109920186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,7 +2592,7 @@ GameObject:
   - component: {fileID: 1109920187}
   - component: {fileID: 1109920189}
   - component: {fileID: 1109920188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2833,7 +2868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f535f0b295b0c4986c5db9f4bc6cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hmdCamera: {fileID: 1347093829}
 --- !u!4 &1141196917
 Transform:
   m_ObjectHideFlags: 0
@@ -2845,7 +2879,39 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1173212298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1173212299}
+  m_Layer: 8
+  m_Name: CarInterior
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1173212299
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173212298}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 426919580}
+  - {fileID: 263378284}
+  - {fileID: 790215344}
+  - {fileID: 1779598913}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187153963
 GameObject:
@@ -2979,7 +3045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261037161}
   - component: {fileID: 1261037160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3041,7 +3107,7 @@ GameObject:
   - component: {fileID: 1281006898}
   - component: {fileID: 1281006897}
   - component: {fileID: 1281006896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GearStickMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3113,7 +3179,7 @@ GameObject:
   - component: {fileID: 1284340816}
   - component: {fileID: 1284340815}
   - component: {fileID: 1284340814}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3175,7 +3241,7 @@ MeshCollider:
   m_GameObject: {fileID: 1284340812}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 0
   m_InflateMesh: 0
@@ -3289,7 +3355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347390930}
   - component: {fileID: 1347390931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GearStickCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3333,7 +3399,7 @@ GameObject:
   - component: {fileID: 1389882575}
   - component: {fileID: 1389882576}
   - component: {fileID: 1389882577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GearStickSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3521,7 +3587,7 @@ GameObject:
   - component: {fileID: 1432571526}
   - component: {fileID: 1432571528}
   - component: {fileID: 1432571527}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3713,7 +3779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481525915}
   - component: {fileID: 1481525916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MinPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3757,7 +3823,7 @@ GameObject:
   - component: {fileID: 1543037077}
   - component: {fileID: 1543037079}
   - component: {fileID: 1543037078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OPL_CAR_RED
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3930,7 +3996,7 @@ GameObject:
   - component: {fileID: 1700586098}
   - component: {fileID: 1700586097}
   - component: {fileID: 1700586096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4007,7 +4073,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1779598913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HeadPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4020,12 +4086,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779598912}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 56980715}
-  m_RootOrder: 8
+  m_Father: {fileID: 1173212299}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799748661
 GameObject:
@@ -4038,7 +4104,7 @@ GameObject:
   - component: {fileID: 1799748665}
   - component: {fileID: 1799748664}
   - component: {fileID: 1799748663}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4118,7 +4184,7 @@ GameObject:
   - component: {fileID: 1832440582}
   - component: {fileID: 1832440584}
   - component: {fileID: 1832440583}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4238,7 +4304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948951495}
   - component: {fileID: 1948951496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VRSimulatorCameraRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4320,7 +4386,7 @@ GameObject:
   - component: {fileID: 2006671169}
   - component: {fileID: 2006671171}
   - component: {fileID: 2006671172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OPL_CAR_RED_Wheel_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4339,7 +4405,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 56980715}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2006671169
 MeshRenderer:
@@ -4422,7 +4488,7 @@ GameObject:
   - component: {fileID: 2028985997}
   - component: {fileID: 2028985996}
   - component: {fileID: 2028985995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4484,7 +4550,7 @@ MeshCollider:
   m_GameObject: {fileID: 2028985993}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 0
   m_InflateMesh: 0
@@ -4509,7 +4575,7 @@ GameObject:
   - component: {fileID: 2090797816}
   - component: {fileID: 2090797815}
   - component: {fileID: 2090797814}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

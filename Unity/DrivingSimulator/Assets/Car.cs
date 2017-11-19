@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Car : MonoBehaviour {
-
+    public CarDriver CarDriver;
 	public Vector3 dragMultiplier = new Vector3(200f, 500f, 100f);
 	public int numberOfGears = 2;
 
@@ -77,12 +77,22 @@ public class Car : MonoBehaviour {
 	/***********************/
 
 	void  GetInput (){
-		//throttle will be get from the "accelerator" and "gear" (-1 to 1)
-		//steer get from the steering wheel
-		throttle = Input.GetAxis("Vertical");
-		steer = Input.GetAxis("Horizontal");
-		backGear = Input.GetKeyDown ("space");
-	}
+        //throttle will be get from the "accelerator" and "gear" (-1 to 1)
+        //steer get from the steering wheel
+        bool keyboardControl = false;
+        if (keyboardControl)
+        {
+            throttle = Input.GetAxis("Vertical");
+            steer = Input.GetAxis("Horizontal");
+            backGear = Input.GetKey("space");
+        }
+        else
+        {
+            throttle = CarDriver.NetAcceleration;
+            steer = CarDriver.WheelDirection;
+            backGear = CarDriver.IsReverse;
+        }
+    }
 
 	//deleted: since only have one level gear (one forwards, one backward)
 	//	void  SetupGears (){
@@ -149,7 +159,7 @@ public class Car : MonoBehaviour {
 
 		if(throttle == 0)
 		{
-			currentEnginePower -= Time.deltaTime * 100;
+			currentEnginePower -= Time.deltaTime * 1000;
 		}
 		else if(Mathf.Sign(relativeVelocity.z) == Mathf.Sign(throttle))
 		{
@@ -158,17 +168,17 @@ public class Car : MonoBehaviour {
 				normPower = 10 - normPower * 9;
 			else
 				normPower = 1.9f - normPower * 0.9f;
-			currentEnginePower += Time.deltaTime * 200 * throttle;
+			currentEnginePower += Time.deltaTime * 5000 * throttle;
 		}
 		else
 		{
-			currentEnginePower += Time.deltaTime * 200 * throttle;
+			currentEnginePower += Time.deltaTime * 5000 * throttle;
 		}
 
-		if(backGear == true)
-			currentEnginePower = - Mathf.Clamp(currentEnginePower, 0, topSpeed);
-		else
-			currentEnginePower = Mathf.Clamp(currentEnginePower, 0, topSpeed);
+		//if(backGear == true)
+		//	currentEnginePower = - Mathf.Clamp(currentEnginePower, 0, topSpeed);
+		//else
+        currentEnginePower = Mathf.Clamp(currentEnginePower, 0, topSpeed);
 
 		if (Mathf.Abs(currentEnginePower) < 1) {
 			currentEnginePower = 0;
@@ -183,16 +193,23 @@ public class Car : MonoBehaviour {
 			float throttleForce = 0;
 			float brakeForce = 0;
 
-
-			if (Mathf.Sign (relativeVelocity.z) == Mathf.Sign (throttle)) {
-				throttleForce = Mathf.Sign (throttle) * currentEnginePower * body.mass;
-			} else {
-				brakeForce = Mathf.Sign (throttle) * body.mass;
+            if (throttle < 0)
+            {
+				brakeForce = -body.mass;
+            }
+            else
+            {
+				throttleForce = currentEnginePower * body.mass;
 			}
 
-			//Debug.Log("throttleForce:" + throttleForce);
-			//Debug.Log ("brakeForce:" + brakeForce);
-			body.AddForce(transform.forward * Time.deltaTime * (throttleForce + brakeForce));
+			Debug.Log("throttleForce:" + throttleForce);
+			Debug.Log ("brakeForce:" + brakeForce);
+            Vector3 force = transform.forward * Time.deltaTime * (throttleForce + brakeForce);
+            if (backGear)
+            {
+                force = -force;
+            }
+			body.AddForce(force);
 		}
 	}
 

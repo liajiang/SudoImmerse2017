@@ -12,6 +12,6 @@ public class WheelTwist : MonoBehaviour {
 
 	void OnDirectionChanged(object sender, DirectionChangedEventArgs e) {
 		float twist = e.Direction * 45;
-		transform.localEulerAngles = new Vector3(0, twist, transform.localEulerAngles.z);
+		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, twist, transform.localEulerAngles.z);
 	}
 }

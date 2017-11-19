@@ -8,7 +8,7 @@
         public bool followRotation;
         public Transform target;
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (target != null)
             {

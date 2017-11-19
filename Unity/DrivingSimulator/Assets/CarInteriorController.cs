@@ -9,7 +9,7 @@ public class CarInteriorController : MonoBehaviour {
 
 	}
 
-	void LateUpdate () {
+	void FixedUpdate () {
 		transform.position = Target.position;
 		transform.rotation = Target.rotation;
 	}

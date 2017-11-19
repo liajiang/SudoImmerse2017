@@ -12,7 +12,7 @@ public class CarDriver : MonoBehaviour
     
     public bool IsReverse { get { return _isReverse; } }
     public float WheelDirection { get { return _wheelDirection; } }
-    public float Acceleration { get { return _acceleration; } }
+    public float NetAcceleration { get { return _netAcceleration; } }
 
     private float _wheelDirection;
     private bool _isReverse;
