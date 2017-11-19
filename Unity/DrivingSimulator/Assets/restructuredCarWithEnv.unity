@@ -480,6 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarDriver: {fileID: 106278730}
+  BackWheelLeft: {fileID: 1982135110}
+  BackWheelRight: {fileID: 426268246}
   dragMultiplier: {x: 200, y: 500, z: 100}
   numberOfGears: 2
   topSpeed: 2000
@@ -1565,7 +1567,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 396054896}
   m_LocalRotation: {x: -0.0000000019686535, y: -1, z: -0.0000000010151098, w: -0.00000013477256}
-  m_LocalPosition: {x: -0.036, y: -0.779, z: -0.812}
+  m_LocalPosition: {x: -0.04, y: -0.779, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 546119739}
@@ -1638,7 +1640,7 @@ MonoBehaviour:
   thickness: 1
   customOutlineModels: []
   customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
+  enableSubmeshHighlight: 1
 --- !u!114 &414947353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4399,6 +4401,7 @@ GameObject:
   - component: {fileID: 1206619921}
   - component: {fileID: 1206619920}
   - component: {fileID: 1206619919}
+  - component: {fileID: 1206619928}
   m_Layer: 8
   m_Name: Steering Wheel
   m_TagString: Untagged
@@ -4610,6 +4613,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1206619917}
   m_Mesh: {fileID: 4300008, guid: 0ff1d82f0e4400d4991dc77808dadf52, type: 3}
+--- !u!114 &1206619928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1206619917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c9bb3b4881c1c4c8d3cc0b7660d61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CarDriver: {fileID: 106278730}
+  Reference: {fileID: 677895168}
+  RotationAxis: {x: 0, y: 1, z: 0}
+  ForwardAxis: {x: 0, y: 0, z: 1}
 --- !u!1001 &1243459888
 Prefab:
   m_ObjectHideFlags: 0

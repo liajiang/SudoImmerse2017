@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Main.unity
     guid: 90a2f43828020ad45b5803a22e8bed16
+  - enabled: 1
+    path: Assets/restructuredCarWithEnv.unity
+    guid: 06ea282b099204e4b89b809a559c9bf2

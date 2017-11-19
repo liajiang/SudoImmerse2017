@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Car : MonoBehaviour {
     public CarDriver CarDriver;
+    public Transform BackWheelLeft;
+    public Transform BackWheelRight;
 	public Vector3 dragMultiplier = new Vector3(200f, 500f, 100f);
 	public int numberOfGears = 2;
 
@@ -90,7 +92,8 @@ public class Car : MonoBehaviour {
         {
             throttle = CarDriver.NetAcceleration;
             steer = CarDriver.WheelDirection;
-            backGear = CarDriver.IsReverse;
+            Debug.Log(steer);
+            backGear = !CarDriver.IsReverse;
         }
     }
 
@@ -236,13 +239,17 @@ public class Car : MonoBehaviour {
 				//else
 				rotationDirection = body.angularVelocity.y; // If we are rotating fast we are applying that rotation to the car
 			}
-			// -- Finally we apply this rotation around a point between the cars front wheels.
-			//transform.RotateAround( transform.TransformPoint( (	frontWheels[0].localPosition + frontWheels[1].localPosition) * 0.5f), 
-			//	transform.up, 
-			//body.velocity.magnitude * Mathf.Clamp01(1 - body.velocity.magnitude / topSpeed) * rotationDirection * Time.deltaTime * 2);
-			transform.RotateAround(transform.TransformPoint(body.position), 
-				transform.up, 
-				body.velocity.magnitude * Mathf.Clamp01(1 - body.velocity.magnitude / topSpeed) * rotationDirection * Time.deltaTime * 2);
+            // -- Finally we apply this rotation around a point between the cars front wheels.
+            //transform.RotateAround( transform.TransformPoint( (	frontWheels[0].localPosition + frontWheels[1].localPosition) * 0.5f), 
+            //	transform.up, 
+            //body.velocity.magnitude * Mathf.Clamp01(1 - body.velocity.magnitude / topSpeed) * rotationDirection * Time.deltaTime * 2);
+
+            transform.RotateAround(transform.TransformPoint((BackWheelLeft.position + BackWheelRight.position) * 0.5f),
+                transform.up,
+            body.velocity.magnitude * Mathf.Clamp01(1 - body.velocity.magnitude / topSpeed) * rotationDirection * Time.deltaTime * 2);
+    //        transform.RotateAround(transform.TransformPoint(body.position), 
+				//transform.up, 
+				//body.velocity.magnitude * Mathf.Clamp01(1 - body.velocity.magnitude / topSpeed) * rotationDirection * Time.deltaTime * 2);
 		}
 	}
 
