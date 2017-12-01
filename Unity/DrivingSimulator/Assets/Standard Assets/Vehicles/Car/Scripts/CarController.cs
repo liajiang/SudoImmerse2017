@@ -125,6 +125,21 @@ namespace UnityStandardAssets.Vehicles.Car
             Revs = ULerp(revsRangeMin, revsRangeMax, m_GearFactor);
         }
 
+        public void MoveWithDirection(float steering, float accel, bool isReverse) {
+            float forwardVelocity = Vector3.Dot(m_Rigidbody.velocity, transform.forward);
+            if (!isReverse && accel < 0 && forwardVelocity < 0 ||
+                isReverse && accel > 0 && forwardVelocity > 0)
+            {
+                Debug.Log("Stop");
+                m_Rigidbody.velocity = Vector3.zero;
+                for (int i = 0; i < 4; i++) {
+                    m_WheelColliders[i].motorTorque = 0;
+                }
+            }
+            else {
+                Move(steering, accel, accel, 0);
+            }
+        }
 
         public void Move(float steering, float accel, float footbrake, float handbrake)
         {
@@ -200,7 +215,7 @@ namespace UnityStandardAssets.Vehicles.Car
             switch (m_CarDriveType)
             {
                 case CarDriveType.FourWheelDrive:
-                    thrustTorque = accel * (m_CurrentTorque / 4f);
+                    thrustTorque = accel * (m_CurrentTorque / 10f);
                     for (int i = 0; i < 4; i++)
                     {
                         m_WheelColliders[i].motorTorque = thrustTorque;
@@ -208,12 +223,12 @@ namespace UnityStandardAssets.Vehicles.Car
                     break;
 
                 case CarDriveType.FrontWheelDrive:
-                    thrustTorque = accel * (m_CurrentTorque / 2f);
+                    thrustTorque = accel * (m_CurrentTorque / 5f);
                     m_WheelColliders[0].motorTorque = m_WheelColliders[1].motorTorque = thrustTorque;
                     break;
 
                 case CarDriveType.RearWheelDrive:
-                    thrustTorque = accel * (m_CurrentTorque / 2f);
+                    thrustTorque = accel * (m_CurrentTorque / 5f);
                     m_WheelColliders[2].motorTorque = m_WheelColliders[3].motorTorque = thrustTorque;
                     break;
 

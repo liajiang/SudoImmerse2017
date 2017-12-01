@@ -41,6 +41,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float maxRolloffDistance = 500;                                      // The maximum distance where rollof starts to take place
         public float dopplerLevel = 1;                                              // The mount of doppler effect used in the audio
         public bool useDoppler = true;                                              // Toggle for using doppler
+        public Transform CameraTransform;
 
         private AudioSource m_LowAccel; // Source for the low acceleration sounds
         private AudioSource m_LowDecel; // Source for the low deceleration sounds
@@ -87,7 +88,8 @@ namespace UnityStandardAssets.Vehicles.Car
         private void Update()
         {
             // get the distance to main camera
-            float camDist = (Camera.main.transform.position - transform.position).sqrMagnitude;
+            Vector3 cameraPosition = Camera.main == null ? CameraTransform.position : Camera.main.transform.position;
+            float camDist = (cameraPosition - transform.position).sqrMagnitude;
 
             // stop sound if the object is beyond the maximum roll off distance
             if (m_StartedSound && camDist > maxRolloffDistance*maxRolloffDistance)
