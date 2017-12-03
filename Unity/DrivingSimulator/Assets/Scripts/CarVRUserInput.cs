@@ -19,7 +19,6 @@ public class CarVRUserInput : MonoBehaviour {
         // pass the input to the car!
         float steering = CarDriver.WheelDirection;
         float acceleration = CarDriver.NetAcceleration;
-        Debug.Log(acceleration);
         if (CarDriver.IsReverse) {
             acceleration = -acceleration;
         }
